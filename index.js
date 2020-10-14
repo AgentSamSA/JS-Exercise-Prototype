@@ -101,7 +101,8 @@ Car.prototype.drive = function (distance) {
 */
 
 function Baby(name, age, favoriteToy) {
-  Person.call(this, name, age);
+  this.name = name;
+  this.age = age;
   this.favoriteToy = favoriteToy;
 }
 Baby.prototype = Object.create(Person.prototype);
@@ -113,10 +114,10 @@ Baby.prototype.play = function () {
   TASK 4
 
   In your own words explain the four principles for the "this" keyword below:
-  1. 
-  2. 
-  3. 
-  4. 
+  1. this binds to whatever is in the window or console if used with a global scope.
+  2. this binds to the object that is related to the function being called, which results in different objects being bound.
+  3. this binds to a specific instance of an object that is created with constructors.
+  4. the binding this has can be overridden to apply to a completely different object that the one created/called with a function.
 */
 
 
